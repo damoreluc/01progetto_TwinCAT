@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.40" ClassName="CDevEtherCATDef" SubType="111">
+	<Device Id="5" DevType="111" DevFlags="#x0001" AmsPort="28677" AmsNetId="5.85.198.60.6.1">
+		<Name>__FILENAME__</Name>
+		<AddressInfo>
+			<Pnp>
+				<DeviceDesc>X001 (X001)</DeviceDesc>
+				<DeviceName>\DEVICE\{C751343E-CA51-4AD7-B5A6-FBCB7D134609}</DeviceName>
+				<DeviceData>00010555c63c</DeviceData>
+			</Pnp>
+		</AddressInfo>
+		<Image Id="4" AddrType="1" ImageType="3">
+			<Name>Immagine di processo</Name>
+		</Image>
+		<EtherCAT/>
+	</Device>
+</TcSmItem>
