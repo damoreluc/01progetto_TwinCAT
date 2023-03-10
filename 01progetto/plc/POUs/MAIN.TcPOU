@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="MAIN" Id="{00882d38-10b9-4e7d-9c0c-20e6cbafcfb4}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	Autoritenuta1: FBAutoritenuta;
+	Autoritenuta2: FBAutoritenuta;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// prima istanza della auto ritenuta (MSF n.1)
+Autoritenuta1(start:= InputOutput.pStart, stop:= InputOutput.pStop, Q => InputOutput.H1);
+
+// seconda istanza della auto ritenuta (MSF n.2)
+Autoritenuta2(start:= InputOutput.pStart2, stop:= InputOutput.pStop2 , Q => InputOutput.H2);
+
+]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>
