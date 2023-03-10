@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.40">
-	<Project ProjectGUID="{13DDDA0D-0DC6-417F-A378-9D8CE191435E}" Target64Bit="true" ShowHideConfigurations="#x347">
+	<Project ProjectGUID="{13DDDA0D-0DC6-417F-A378-9D8CE191435E}" TargetNetId="5.85.197.242.1.1" Target64Bit="true" ShowHideConfigurations="#x347">
 		<System>
 			<Settings MaxCpus="12"/>
 			<Tasks>
@@ -12,5 +12,9 @@
 		<Plc>
 			<Project File="plc.xti"/>
 		</Plc>
+		<Io>
+			<Device File="Dispositivo 1 (EtherCAT).xti" Id="1"/>
+			<Device File="Dispositivo 4 (EtherCAT).xti" Id="4"/>
+		</Io>
 	</Project>
 </TcSmProject>
