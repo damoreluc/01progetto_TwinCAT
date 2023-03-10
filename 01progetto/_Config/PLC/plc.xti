@@ -1,9 +1,41 @@
 <?xml version="1.0"?>
 <TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.40" ClassName="CNestedPlcProjDef">
 	<Project GUID="{0D67B0E8-8639-4364-956E-6F9523BB8AFE}" Name="plc" PrjFilePath="..\..\plc\plc.plcproj" TmcFilePath="..\..\plc\plc.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="plc\plc.tmc" TmcHash="{DB1D6960-4BDD-0D15-EB18-8EDF30BEF27E}">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="plc\plc.tmc" TmcHash="{3F486436-6944-BB2E-7D9E-5DC5C673F024}">
 			<Name>plc Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+			<Vars VarGrpType="1">
+				<Name>PlcTask Inputs</Name>
+				<Var>
+					<Name>InputOutput.pStart</Name>
+					<Comment><![CDATA[ prima macchina]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>InputOutput.pStop</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>InputOutput.pStart2</Name>
+					<Comment><![CDATA[ seconda macchina]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>InputOutput.pStop2</Name>
+					<Type>BOOL</Type>
+				</Var>
+			</Vars>
+			<Vars VarGrpType="2" AreaNo="1">
+				<Name>PlcTask Outputs</Name>
+				<Var>
+					<Name>InputOutput.H1</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>InputOutput.H2</Name>
+					<Type>BOOL</Type>
+				</Var>
+			</Vars>
 			<Contexts>
 				<Context>
 					<Id NeedCalleeCall="true">0</Id>
@@ -20,4 +52,18 @@
 			</TaskPouOids>
 		</Instance>
 	</Project>
+	<Mappings>
+		<OwnerA Name="plc Instance">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EL1809)">
+				<Link VarA="PlcTask Inputs^InputOutput.pStart" VarB="Channel 1^Input" Size="1"/>
+				<Link VarA="PlcTask Inputs^InputOutput.pStart2" VarB="Channel 3^Input" Size="1"/>
+				<Link VarA="PlcTask Inputs^InputOutput.pStop" VarB="Channel 2^Input" Size="1"/>
+				<Link VarA="PlcTask Inputs^InputOutput.pStop2" VarB="Channel 4^Input" Size="1"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 3 (EL2809)">
+				<Link VarA="PlcTask Outputs^InputOutput.H1" VarB="Channel 1^Output" Size="1"/>
+				<Link VarA="PlcTask Outputs^InputOutput.H2" VarB="Channel 2^Output" Size="1"/>
+			</OwnerB>
+		</OwnerA>
+	</Mappings>
 </TcSmItem>

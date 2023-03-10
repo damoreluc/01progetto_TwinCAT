@@ -4,13 +4,13 @@
     <Declaration><![CDATA[{attribute 'qualified_only'}
 VAR_GLOBAL
 	// prima macchina
-	pStart	:	BOOL;
-	pStop	:	BOOL;
-	H1		:	BOOL;
+	pStart	AT %I*	:	BOOL;
+	pStop	AT %I*	:	BOOL;
+	H1		AT %Q*	:	BOOL;
 	// seconda macchina
-	pStart2	:	BOOL;
-	pStop2	:	BOOL;
-	H2		:	BOOL;
+	pStart2	AT %I*	:	BOOL;
+	pStop2	AT %I*	:	BOOL;
+	H2		AT %Q*	:	BOOL;
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>
