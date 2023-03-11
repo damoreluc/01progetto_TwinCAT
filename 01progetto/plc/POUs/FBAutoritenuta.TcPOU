@@ -41,7 +41,7 @@ Q := stato;
 statica := stato;
 
 // comando Q2 col valore della variabile statica
-Q2 := statica;]]></ST>
+//Q2 := statica;]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
